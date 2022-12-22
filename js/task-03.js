@@ -20,21 +20,54 @@ const images = [
   },
 ];
 
-const ulElement = document.querySelector('.gallery');
+// =====First variant====
 
-const makeListOfImages = images => {
-  return images.map(image => {
-    return ulElement.insertAdjacentHTML(
-      'beforeend',
-      `<li><img src = '${image.url}' alt = '${image.alt}' width="320"></li>`
-    );
-  });
-};
+const containerElement = document.querySelector('.gallery');
 
-makeListOfImages(images);
+const makeListOfImages = images
+  .map(({url, alt}) => `<li><img src = '${url}' alt = '${alt}' width="320"></li>`)
+  .join('');
+  
+containerElement.insertAdjacentHTML('beforeend', makeListOfImages);
+  
+containerElement.style.display = 'flex';
+containerElement.style.flexDirection = 'column';
+containerElement.style.alignItems = 'center';
+containerElement.style.gap = '20px';
+containerElement.style.listStyle = 'none';
 
-ulElement.style.display = 'flex';
-ulElement.style.flexDirection = 'column';
-ulElement.style.alignItems = 'center';
-ulElement.style.gap = '20px';
-ulElement.style.listStyle = 'none';
+// =====Second variant====
+
+// const containerElement = document.querySelector('.gallery');
+
+// images.forEach(({url, alt}) => {
+//   const makeListOfImages = `<li><img src = '${url}' alt = '${alt}' width="320"></li>`
+//   containerElement.insertAdjacentHTML('beforeend', makeListOfImages);
+// })
+
+// containerElement.style.display = 'flex';
+// containerElement.style.flexDirection = 'column';
+// containerElement.style.alignItems = 'center';
+// containerElement.style.gap = '20px';
+// containerElement.style.listStyle = 'none';
+
+// =====Third variant====
+
+// const containerElement = document.querySelector('.gallery');
+
+// const makeListOfImages = images => {
+//   return images.map(image => {
+//     return containerElement.insertAdjacentHTML(
+//       'beforeend',
+//       `<li><img src = '${image.url}' alt = '${image.alt}' width="320"></li>`
+//     );
+//   });
+// };
+
+// makeListOfImages(images);
+
+// containerElement.style.display = 'flex';
+// containerElement.style.flexDirection = 'column';
+// containerElement.style.alignItems = 'center';
+// containerElement.style.gap = '20px';
+// containerElement.style.listStyle = 'none';
