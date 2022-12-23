@@ -22,52 +22,52 @@ const images = [
 
 // =====First variant====
 
-const containerElement = document.querySelector('.gallery');
+const listElement = document.querySelector('.gallery');
 
-const makeListOfImages = images
+const makeGalleryOfImages = images
   .map(({url, alt}) => `<li><img src = '${url}' alt = '${alt}' width="320"></li>`)
   .join('');
   
-containerElement.insertAdjacentHTML('beforeend', makeListOfImages);
+listElement.insertAdjacentHTML('beforeend', makeGalleryOfImages);
   
-containerElement.style.display = 'flex';
-containerElement.style.flexDirection = 'column';
-containerElement.style.alignItems = 'center';
-containerElement.style.gap = '20px';
-containerElement.style.listStyle = 'none';
+listElement.style.display = 'flex';
+listElement.style.flexDirection = 'column';
+listElement.style.alignItems = 'center';
+listElement.style.gap = '20px';
+listElement.style.listStyle = 'none';
 
 // =====Second variant====
 
-// const containerElement = document.querySelector('.gallery');
+// const listElement = document.querySelector('.gallery');
 
 // images.forEach(({url, alt}) => {
-//   const makeListOfImages = `<li><img src = '${url}' alt = '${alt}' width="320"></li>`
-//   containerElement.insertAdjacentHTML('beforeend', makeListOfImages);
+//   const makeGalleryOfImages = `<li><img src = '${url}' alt = '${alt}' width="320"></li>`
+//   listElement.insertAdjacentHTML('beforeend', makeGalleryOfImages);
 // })
 
-// containerElement.style.display = 'flex';
-// containerElement.style.flexDirection = 'column';
-// containerElement.style.alignItems = 'center';
-// containerElement.style.gap = '20px';
-// containerElement.style.listStyle = 'none';
+// listElement.style.display = 'flex';
+// listElement.style.flexDirection = 'column';
+// listElement.style.alignItems = 'center';
+// listElement.style.gap = '20px';
+// listElement.style.listStyle = 'none';
 
 // =====Third variant====
 
-// const containerElement = document.querySelector('.gallery');
+// const listElement = document.querySelector('.gallery');
 
-// const makeListOfImages = images => {
+// const makeGalleryOfImages = images => {
 //   return images.map(image => {
-//     return containerElement.insertAdjacentHTML(
+//     return listElement.insertAdjacentHTML(
 //       'beforeend',
 //       `<li><img src = '${image.url}' alt = '${image.alt}' width="320"></li>`
 //     );
 //   });
 // };
 
-// makeListOfImages(images);
+// makeGalleryOfImages(images);
 
-// containerElement.style.display = 'flex';
-// containerElement.style.flexDirection = 'column';
-// containerElement.style.alignItems = 'center';
-// containerElement.style.gap = '20px';
-// containerElement.style.listStyle = 'none';
+// listElement.style.display = 'flex';
+// listElement.style.flexDirection = 'column';
+// listElement.style.alignItems = 'center';
+// listElement.style.gap = '20px';
+// listElement.style.listStyle = 'none';

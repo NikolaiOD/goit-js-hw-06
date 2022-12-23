@@ -16,32 +16,32 @@ const ingredients = [
 
 // =====First variant====
 
-const containerElement = document.querySelector('#ingredients');
+const listElement = document.querySelector('#ingredients');
 
-const makeListOfIngredients = ingredients
+const makeItemOfIngredients = ingredients
   .map((ingridient) => {
-    const liElement = document.createElement('li');
-    liElement.textContent = ingridient;
-    liElement.classList.add('item');
+    const itemElement = document.createElement('li');
+    itemElement.textContent = ingridient;
+    itemElement.classList.add('item');
 
-    return liElement;
+    return itemElement;
   })
 
-containerElement.append(...makeListOfIngredients);
+listElement.append(...makeItemOfIngredients);
 
 // =====Second variant====
 
-// const containerElement = document.querySelector('#ingredients');
+// const listElement = document.querySelector('#ingredients');
 
-// const makeListOfIngredients = ingredients => {
+// const makeItemOfIngredients = ingredients => {
 //   return ingredients.map(ingridient => {
-//     const liElement = document.createElement('li');
-//     liElement.textContent = ingridient;
-//     liElement.classList.add('item');
+//     const itemElement = document.createElement('li');
+//     itemElement.textContent = ingridient;
+//     itemElement.classList.add('item');
 
-//     return liElement;
+//     return itemElement;
 //   });
 // };
 
-// const elements = makeListOfIngredients(ingredients);
-// containerElement.append(...elements);
+// const elements = makeItemOfIngredients(ingredients);
+// listElement.append(...elements);
