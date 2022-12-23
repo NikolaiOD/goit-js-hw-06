@@ -25,7 +25,7 @@ const makeItemOfIngredients = ingredients
     itemElement.classList.add('item');
 
     return itemElement;
-  })
+  });
 
 listElement.append(...makeItemOfIngredients);
 
