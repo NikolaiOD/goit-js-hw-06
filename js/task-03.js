@@ -25,11 +25,11 @@ const images = [
 const listElement = document.querySelector('.gallery');
 
 const makeGalleryOfImages = images
-  .map(({url, alt}) => `<li><img src = '${url}' alt = '${alt}' width="320"></li>`)
+  .map(({ url, alt }) => `<li><img src = '${url}' alt = '${alt}' width="320"></li>`)
   .join('');
-  
+
 listElement.insertAdjacentHTML('beforeend', makeGalleryOfImages);
-  
+
 listElement.style.display = 'flex';
 listElement.style.flexDirection = 'column';
 listElement.style.alignItems = 'center';
